@@ -1,7 +1,10 @@
 package com.kerwin.spring.mycrm.permision.util;
 
+import com.google.common.collect.Maps;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.util.Map;
 
 /**
  * Json数据处理类
@@ -105,6 +108,24 @@ public class JsonData
         JsonData jsonData = new JsonData(false);
         jsonData.setMsg(msg);
         return jsonData;
+    }
+
+    /**
+     * 功能描述:
+     * 〈将jsonData转换为map〉
+     *
+     * @param
+     * @return : java.util.Map<java.lang.String,java.lang.Object>
+     * @author : d.w
+     * @date : 2019/09/09 14:04
+     */
+    public Map<String, Object> toMap()
+    {
+        Map<String, Object> result = Maps.newHashMap();
+        result.put("ret", ret);
+        result.put("msg", msg);
+        result.put("data", data);
+        return result;
     }
 
 }
