@@ -15,10 +15,14 @@
 
     <!--<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/>-->
 
+    <mvc:interceptors>
+        <bean class="com.kerwin.spring.mycrm.permision.common.HttpInterceptor"/>
+    </mvc:interceptors>
+
 
     <bean class="com.kerwin.spring.mycrm.permision.exception.PermissionException"/>
 
-    <bean class="com.kerwin.spring.mycrm.permision.common.MycrmExceptionResolver"/>
+    <bean class="com.kerwin.spring.mycrm.permision.common.MyCrmExceptionResolver"/>
 
     <bean class="org.springframework.web.servlet.view.BeanNameViewResolver"/>
 

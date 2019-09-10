@@ -10,13 +10,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * @className: MycrmExceptionResolver
+ * @className: MyCrmExceptionResolver
  * @version: v1.0.0
  * @author: d.w
  * @date: 2019-09-06 16:31
  */
 @Slf4j
-public class MycrmExceptionResolver implements HandlerExceptionResolver
+public class MyCrmExceptionResolver implements HandlerExceptionResolver
 {
     @Override
     public ModelAndView resolveException(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex)

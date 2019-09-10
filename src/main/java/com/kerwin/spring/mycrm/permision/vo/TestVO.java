@@ -2,9 +2,11 @@ package com.kerwin.spring.mycrm.permision.vo;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 import org.hibernate.validator.constraints.NotBlank;
 
 import javax.validation.constraints.NotNull;
+import java.util.List;
 
 /**
  * @className: TestVO
@@ -14,6 +16,7 @@ import javax.validation.constraints.NotNull;
  */
 @Setter
 @Getter
+@ToString
 public class TestVO
 {
     @NotNull
@@ -21,4 +24,8 @@ public class TestVO
 
     @NotBlank
     private String name;
+
+    private List list;
+
+    private Integer sex;
 }

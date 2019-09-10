@@ -47,6 +47,7 @@ public class TestController
         throw new RuntimeException("test page exception");
     }
 
+    @ResponseBody
     @RequestMapping(value = "/validate.json",method = RequestMethod.GET)
     public JsonData validate(TestVO vo){
         log.info("hello");
